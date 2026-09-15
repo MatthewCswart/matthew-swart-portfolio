@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Swart | Sound Producer Portfolio</title>
+  <meta name="description" content="Portfolio of Matthew Swart – Songwriter, Producer and Vocalist. SAE BA Sound Production applicant." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555555;
+      --accent: #0a7c6e;
+      --divider: #dddddd;
+      --light: #f7f7f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 40px 0 50px;
+    }
+
+    .photo-placeholder {
+      width: 140px;
+      height: 160px;
+      background: var(--light);
+      border: 1px solid var(--divider);
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .hero .roles {
+      color: var(--accent);
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+    }
+
+    .hero .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 auto 18px;
+    }
+
+    .hero .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 520px;
+      margin: 0 auto 10px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      margin: 30px 0 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .section-line {
+      height: 1px;
+      background: var(--divider);
+      margin-bottom: 22px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin: 22px 0 8px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+
+    /* Track cards */
+    .track {
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .track:last-child {
+      border-bottom: none;
+    }
+
+    .track h3 {
+      margin: 0 0 3px;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .track .role {
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+
+    .track .note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .track a.listen {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.85rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .track a.listen:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact .info {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .contact .note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 18px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .container {
+        padding: 24px 16px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="photo-placeholder">
+        Insert<br>your photo<br>here
+      </div>
+      <h1>Matthew Swart</h1>
+      <div class="roles">Songwriter • Producer • Vocalist</div>
+      <div class="divider"></div>
+      <p class="tagline">
+        Self-taught producer driven by curiosity for sound design,
+        the craft of shaping audio, and the desire to make people feel the music.
+      </p>
+      <p class="tagline">
+        I write on guitar, build arrangements around melodies and riffs,
+        perform my own vocals, and create drum patterns that serve the emotion of each song.
+      </p>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#skills">Skills &amp; Education</a>
+      <a href="#works">Selected Works</a>
+      <a href="#about">About</a>
+      <a href="#journey">Learning Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- 01 SKILLS -->
+    <section id="skills">
+      <h2>01  Skills, Tools &amp; Education</h2>
+      <div class="section-line"></div>
+
+      <h3>Tools I Currently Use</h3>
+      <p>
+        Ableton Live 12 is my main DAW. I write and record with both acoustic and electric guitar.
+        My current recording setup is simple and non-standard (electric guitar into a ¼-inch to 3.5 mm converter,
+        then into the line-in on my PC), but it works for the stage I am at and allows me to capture ideas and develop them.
+      </p>
+
+      <h3>Skills I Feel Confident With</h3>
+      <ul>
+        <li>Understanding the structure and workflow of Ableton Live</li>
+        <li>Writing simple guitar riffs and basic lyrics</li>
+        <li>Arranging and warping recordings</li>
+        <li>Manual MIDI drum programming</li>
+        <li>General computer and software troubleshooting</li>
+      </ul>
+
+      <h3>Areas I Am Actively Improving</h3>
+      <ul>
+        <li>Vocal mixing and performance</li>
+        <li>Creating clean transitions</li>
+        <li>Frequency balance and avoiding muddiness</li>
+        <li>Overall mix cohesion and fine-tuning of arrangements</li>
+      </ul>
+
+      <h3>Education</h3>
+      <ul>
+        <li>Cambridge IGCSE – Completed</li>
+        <li>Cambridge AS Levels – Currently completing</li>
+        <li>SAE Institute – Bachelor of Arts in Sound Production (Applicant)</li>
+      </ul>
+      <p>
+        I am not currently employed and am focusing on finishing my AS Levels while preparing my application for SAE.
+        My comfort with computers and software has helped me teach myself production tools and solve technical problems as they arise.
+      </p>
+    </section>
+
+    <!-- 02 SELECTED WORKS -->
+    <section id="works">
+      <h2>02  Selected Works</h2>
+      <div class="section-line"></div>
+      <p>
+        Seven original tracks presented with the strongest and most recent work first.
+        Each piece is written, produced and performed by me.
+      </p>
+
+      <div class="track">
+        <h3>1. Beautiful — September 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          A love song that explores vocal harmonies, more complex chord progressions and tempo changes.
+          This is my most recent work and represents the direction I want to keep developing — both emotionally and technically.
+          Inspiration came from wanting to write something warmer and more intricate than previous tracks.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+
+      <div class="track">
+        <h3>2. Apple Tree — August 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          Started from a simple guitar riff and developed it into a more complete, singable song.
+          I focused on giving the track more depth by layering distorted guitars at different frequencies to create a fuller tone.
+          This piece shows progress in turning a basic idea into a more produced song.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+
+      <div class="track">
+        <h3>3. Beat Down — July 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          A pop-leaning track about pushing yourself until you’re beat down while still fighting for someone or something.
+          Built around a strong, clean bassline, simple guitar chords, and a driving beat.
+          This song focuses on energy and groove more than previous work.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+
+      <div class="track">
+        <h3>4. Mountain — June 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          An acoustic song exploring the feeling of standing helpless in the face of something tragic or unchangeable.
+          The main focus was writing honest lyrics and creating an arrangement where smaller guitar parts blend naturally with the core acoustic part.
+          Inspiration came from a personal experience of powerlessness.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+
+      <div class="track">
+        <h3>5. Rusty Strings — February 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          Centred on a faster, distorted guitar riff that I worked to keep from becoming repetitive, paired with drums that feel more intentional.
+          This track marked a clear step forward in guitar writing and rhythmic arrangement compared with earlier pieces.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+
+      <div class="track">
+        <h3>6. River Dance — August 2025</h3>
+        <div class="role">Songwriter • Producer</div>
+        <p class="note">
+          An instrumental piece focused on a very simple guitar riff, bass movement, and gradual fades between sections.
+          The goal was to tell a story without lyrics or vocals. This was also my first serious attempt at writing drums to support a guitar-based track with no prior drum experience.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+
+      <div class="track">
+        <h3>7. Stranger — July 2025</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          Built around a simple, peaceful guitar riff and lyrics that aim to feel relatable and honest.
+          One of my earlier complete songs. Looking back, the arrangement and mix are still developing, but the core idea and emotional intent are clear.
+          Included to show where the journey began.
+        </p>
+        <a class="listen" href="#" target="_blank">Listen on YouTube →</a>
+      </div>
+    </section>
+
+    <!-- 03 ABOUT -->
+    <section id="about">
+      <h2>03  About &amp; Personal Statement</h2>
+      <div class="section-line"></div>
+      <p>
+        I am a self-taught songwriter, producer and performer. I have been actively creating music for over a year,
+        building on an earlier interest that began in my youth with simple tools like BeepBox. What started as experimentation
+        has grown into a real passion for sound design, arranging, and shaping music from the ground up.
+      </p>
+      <p>
+        I currently have a growing collection of original tracks. I write guitar melodies and riffs, arrange them to the best of my ability
+        with the equipment I have, perform my own vocals, and create drum patterns that support the feeling of each song.
+        While my mixing and vocal performances are still developing, I am constantly listening, learning, and trying to improve.
+      </p>
+      <p>
+        I am applying to the SAE Bachelor of Arts in Sound Production because I want to turn this passion into a professional career working with sound.
+        I am especially drawn to sound design, the process of recording and refining tracks in a DAW, and learning how to create strong, clear sound
+        in both studio and live environments. Self-teaching has taken me a certain distance — now I want structured training, real experience,
+        and the technical foundation needed to grow further.
+      </p>
+      <p>
+        My goal is simple: to develop the skills that will let me work confidently with sound and share music that people can truly feel.
+      </p>
+
+      <h3>What I Bring</h3>
+      <ul>
+        <li>Complete creative ownership — writing, production and performance</li>
+        <li>Clear evidence of self-directed improvement across a body of work</li>
+        <li>Strong motivation and readiness for professional training</li>
+        <li>Genuine curiosity about sound design and how sound works</li>
+      </ul>
+    </section>
+
+    <!-- 04 LEARNING JOURNEY -->
+    <section id="journey">
+      <h2>04  My Learning Journey &amp; Passion</h2>
+      <div class="section-line"></div>
+      <p>
+        I have always felt a deep emotional connection with music. It is the way I process and express what I feel,
+        and it is also something I want to share — both through my own songs and by eventually helping other people
+        bring their ideas to life when they cannot produce them themselves.
+      </p>
+      <p>
+        Everything I know so far has been self-taught. I work in Ableton Live 12, play guitar, and handle my own mixing.
+        I programme drums manually by drawing MIDI notes, and I continually practise balancing elements so they sit together more cleanly.
+        Over the past year I have focused on improving arrangement, sound design, and the overall cohesion of my tracks.
+      </p>
+      <p>
+        The areas I still find most challenging are vocal mixing, creating smooth transitions, and placing sounds in the mix
+        without them becoming muddy or fighting for space. Frequency clashes and level balance remain things I am actively working to understand better.
+      </p>
+      <p>
+        I believe SAE will give me the proper technical foundation I cannot fully build on my own.
+        Structured training in recording, mixing, sound design, and live sound will help me develop the skills and confidence
+        needed to work professionally and open doors that would be much harder to reach by myself.
+      </p>
+    </section>
+
+    <!-- 05 CONTACT -->
+    <section id="contact" class="contact">
+      <h2>05  Contact</h2>
+      <div class="section-line" style="max-width:120px;margin-left:auto;margin-right:auto;"></div>
+
+      <p class="info"><strong>Matthew Swart</strong></p>
+      <p class="info">Email: <a href="mailto:matttube@yahoo.com" style="color:var(--accent);text-decoration:none;">matttube@yahoo.com</a></p>
+      <p class="info">Phone / WhatsApp: 066 200 7564</p>
+      <p class="info">Location: Pietermaritzburg, KwaZulu-Natal</p>
+
+      <p class="note">
+        I am currently preparing my application for the SAE BA in Sound Production<br>
+        and welcome any feedback on my work.
+      </p>
+    </section>
+
+    <footer>
+      Thank you for listening and reviewing my work.<br>
+      Passionate • Self-improving • Ready to learn
+    </footer>
+
+  </div>
+</body>
+</html>
+EOF
