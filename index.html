@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Swart | Sound Producer Portfolio</title>
+  <meta name="description" content="Portfolio of Matthew Swart – Songwriter, Producer and Vocalist. SAE BA Sound Production applicant." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #555555;
+      --accent: #0a7c6e;
+      --divider: #dddddd;
+      --light: #f7f7f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 32px 90px;
+    }
+
+    /* Two-column skills grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 18px 0 24px;
+    }
+
+    .skills-col h3 {
+      margin-top: 0;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 40px 0 50px;
+    }
+
+    .photo-circle {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .hero .roles {
+      color: var(--accent);
+      font-size: 1.05rem;
+      margin-bottom: 14px;
+    }
+
+    .hero .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 auto 18px;
+    }
+
+    .hero .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 520px;
+      margin: 0 auto 10px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      margin: 30px 0 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .section-line {
+      height: 1px;
+      background: var(--divider);
+      margin-bottom: 22px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin: 22px 0 8px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+
+    /* Track cards */
+    .track {
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .track:last-child {
+      border-bottom: none;
+    }
+
+    .track h3 {
+      margin: 0 0 3px;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .track .role {
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+
+    .track .note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .track a.listen {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.85rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .track a.listen:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact .info {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .contact .note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 18px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Fade-in animation */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Optional mood images */
+    .mood-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0 10px;
+    }
+    .mood-images img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--divider);
+    }
+    .mood-placeholder {
+      background: var(--light);
+      border: 1px dashed var(--divider);
+      border-radius: 8px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .container {
+        padding: 28px 18px 70px;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .mood-images {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="photo-circle">
+        <img src="profile.jpg" alt="Matthew Swart" />
+      </div>
+      <h1>Matthew Swart</h1>
+      <div class="roles">Songwriter • Producer • Vocalist</div>
+      <div class="divider"></div>
+      <p class="tagline">
+        Self-taught producer driven by curiosity for sound design,
+        the craft of shaping audio, and the desire to make people feel the music.
+      </p>
+      <p class="tagline">
+        I write on guitar, build arrangements around melodies and riffs,
+        perform my own vocals, and create drum patterns that serve the emotion of each song.
+      </p>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#skills">Skills &amp; Education</a>
+      <a href="#works">Selected Works</a>
+      <a href="#about">About</a>
+      <a href="#journey">Learning Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- 01 SKILLS -->
+    <section id="skills" class="fade-section">
+      <h2>01  Skills, Tools &amp; Education</h2>
+      <div class="section-line"></div>
+
+      <h3>Tools I Currently Use</h3>
+      <p>
+        Ableton Live 12 is my main DAW. I write and record with both acoustic and electric guitar.
+        My current recording setup is simple and non-standard (electric guitar into a ¼-inch to 3.5 mm converter,
+        then into the line-in on my PC), but it works for the stage I am at and allows me to capture ideas and develop them.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skills-col">
+          <h3>Skills I Feel Confident With</h3>
+          <ul>
+            <li>Understanding the structure and workflow of Ableton Live</li>
+            <li>Writing simple guitar riffs and basic lyrics</li>
+            <li>Arranging and warping recordings</li>
+            <li>Manual MIDI drum programming</li>
+            <li>General computer and software troubleshooting</li>
+          </ul>
+        </div>
+        <div class="skills-col">
+          <h3>Areas I Am Actively Improving</h3>
+          <ul>
+            <li>Vocal mixing and performance</li>
+            <li>Creating clean transitions</li>
+            <li>Frequency balance and avoiding muddiness</li>
+            <li>Overall mix cohesion and fine-tuning of arrangements</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Education</h3>
+      <ul>
+        <li>Cambridge IGCSE – Completed</li>
+        <li>Cambridge AS Levels – Currently completing</li>
+      </ul>
+      <p>
+        I am not currently employed and am focusing on finishing my AS Levels while preparing my application for SAE.
+        My comfort with computers and software has helped me teach myself production tools and solve technical problems as they arise.
+      </p>
+    </section>
+
+    
+    <!-- 02 SELECTED WORKS -->
+    <section id="works" class="fade-section">
+      <h2>02  Selected Works</h2>
+      <div class="section-line"></div>
+      <p>
+        Seven original tracks presented with the strongest and most recent work first.
+        Each piece is written, produced and performed by me. Click play to listen directly on this page.
+      </p>
+
+      <div class="track">
+        <h3>1. Beautiful — September 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          A love song that explores vocal harmonies, more complex chord progressions and tempo changes.
+          This is my most recent work and represents the direction I want to keep developing — both emotionally and technically.
+          Inspiration came from wanting to write something warmer and more intricate than previous tracks.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/beautiful.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>2. Apple Tree — August 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          Started from a simple guitar riff and developed it into a more complete, singable song.
+          I focused on giving the track more depth by layering distorted guitars at different frequencies to create a fuller tone.
+          This piece shows progress in turning a basic idea into a more produced song.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/apple-tree.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>3. Beat Down — July 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          A pop-leaning track about pushing yourself until you’re beat down while still fighting for someone or something.
+          Built around a strong, clean bassline, simple guitar chords, and a driving beat.
+          This song focuses on energy and groove more than previous work.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/beat-down.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>4. Mountain — June 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          An acoustic song exploring the feeling of standing helpless in the face of something tragic or unchangeable.
+          The main focus was writing honest lyrics and creating an arrangement where smaller guitar parts blend naturally with the core acoustic part.
+          Inspiration came from a personal experience of powerlessness.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/mountain.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>5. Rusty Strings — February 2026</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          Centred on a faster, distorted guitar riff that I worked to keep from becoming repetitive, paired with drums that feel more intentional.
+          This track marked a clear step forward in guitar writing and rhythmic arrangement compared with earlier pieces.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/rusty-strings.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>6. River Dance — August 2025</h3>
+        <div class="role">Songwriter • Producer</div>
+        <p class="note">
+          An instrumental piece focused on a very simple guitar riff, bass movement, and gradual fades between sections.
+          The goal was to tell a story without lyrics or vocals. This was also my first serious attempt at writing drums to support a guitar-based track with no prior drum experience.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/river-dance.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>7. Stranger — July 2025</h3>
+        <div class="role">Songwriter • Producer • Vocalist</div>
+        <p class="note">
+          Built around a simple, peaceful guitar riff and lyrics that aim to feel relatable and honest.
+          One of my earlier complete songs. Looking back, the arrangement and mix are still developing, but the core idea and emotional intent are clear.
+          Included to show where the journey began.
+        </p>
+        <audio controls preload="none" style="width:100%; max-width:420px; height:36px; margin-top:6px;">
+          <source src="audio/stranger.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+
+    <!-- 03 ABOUT -->
+    <section id="about" class="fade-section">
+      <h2>03  About &amp; Personal Statement</h2>
+      <div class="section-line"></div>
+      <p>
+        I am a self-taught songwriter, producer and performer. I started experimenting with simple tools like BeepBox when I was younger,
+        and over the past year that curiosity has grown into a focused passion for sound design, arranging, and building complete tracks.
+      </p>
+      <p>
+        I write guitar melodies and riffs, record and arrange everything myself, perform my own vocals, and programme drums that support the emotion of each song.
+        My mixing and vocal work are still developing, but I am consistent about listening back, identifying problems, and improving.
+      </p>
+      <p>
+        I am applying to the SAE Bachelor of Arts in Sound Production because I want to turn this passion into a real career working with sound.
+        Self-teaching has taken me as far as it can — now I need structured training, proper technical foundations, and the chance to learn both studio and live sound in a professional environment.
+      </p>
+      <p>
+        My goal is straightforward: to become confident and skilled enough to work with sound at a high level, and to make music that people can actually feel.
+      </p>
+
+      <h3>What I Bring</h3>
+      <ul>
+        <li>Complete creative ownership — writing, production and performance</li>
+        <li>Clear evidence of self-directed improvement across a body of work</li>
+        <li>Strong motivation and readiness for professional training</li>
+        <li>Genuine curiosity about sound design and how sound works</li>
+      </ul>
+    </section>
+
+    <!-- 04 LEARNING JOURNEY -->
+    <section id="journey" class="fade-section">
+      <h2>04  My Learning Journey &amp; Passion</h2>
+      <div class="section-line"></div>
+      <p>
+        Music has always been the way I process and express emotion. I want to keep making songs that people can feel,
+        and eventually help others bring their ideas to life when they cannot produce them themselves.
+      </p>
+      <p>
+        Everything I know so far is self-taught. I work in Ableton Live 12, write and record on guitar, programme drums by drawing MIDI notes,
+        and handle my own mixing. Over the past year I have focused on tighter arrangements, clearer sound design, and making the different elements of a track sit together more cleanly.
+      </p>
+      <p>
+        The areas I still struggle with most are vocal mixing, smooth transitions, and controlling frequency clashes so the mix does not become muddy.
+        These are the exact skills I want to strengthen through proper training.
+      </p>
+      <p>
+        SAE will give me the technical foundation I cannot fully build alone. Structured learning in recording, mixing, sound design and live sound
+        will help me develop the confidence and ability needed to work professionally and open opportunities that would be difficult to reach by myself.
+      </p>
+    </section>
+
+    <!-- 05 CONTACT -->
+    <section id="contact" class="contact fade-section">
+      <h2>05  Contact</h2>
+      <div class="section-line" style="max-width:120px;margin-left:auto;margin-right:auto;"></div>
+
+      <p class="info"><strong>Matthew Swart</strong></p>
+      <p class="info">Email: <a href="mailto:matttube@yahoo.com" style="color:var(--accent);text-decoration:none;">matttube@yahoo.com</a></p>
+      <p class="info">Phone / WhatsApp: 066 200 7564</p>
+      <p class="info">Location: Pietermaritzburg, KwaZulu-Natal</p>
+
+      <p class="note" style="margin-top:22px;">
+        Currently preparing my application for the SAE Bachelor of Arts in Sound Production.<br>
+        Open to feedback and happy to share project files or stems on request.
+      </p>
+    </section>
+
+    <footer>
+      Thank you for listening and reviewing my work.<br>
+      Passionate • Self-improving • Ready to learn
+    </footer>
+
+  </div>
+
+  <script>
+    // Smooth fade-in when sections enter the viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.fade-section').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Also make the hero visible immediately
+    document.querySelector('.hero')?.classList.add('visible');
+  </script>
+</body>
+</html>
+EOF
